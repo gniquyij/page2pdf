@@ -4,7 +4,6 @@ RUN apt install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2
 RUN npm i puppeteer@1.20.0
 
 COPY entrypoint.sh /entrypoint.sh
-COPY main.js /main.js
-VOLUME /pdf
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
