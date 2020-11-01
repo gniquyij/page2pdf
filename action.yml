@@ -1,0 +1,11 @@
+name: 'page2pdf'
+description: 'page2pdf'
+inputs:
+  url:
+    description: 'page url'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.url }}

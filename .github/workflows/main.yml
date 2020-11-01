@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  page2pdf:
+    runs-on: ubuntu-latest
+    name: page2pdf
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - uses: ./
+        with:
+          url: 'news.ycombinator.com'
+      - name: debug
+        run: |
+          pwd
+          ls
+          cd pdf
+          ls
