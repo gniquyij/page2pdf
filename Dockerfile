@@ -5,6 +5,8 @@ RUN npm i puppeteer@1.20.0
 
 COPY main.js /main.js
 VOLUME /pdf
-RUN pwd
-RUN ls
-RUN node /main.js $INPUT_URL
+
+RUN echo $1
+ARG url=$1
+ENV URL=$url
+RUN node /main.js $URL
