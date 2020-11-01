@@ -11,6 +11,6 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   let url = process.argv.slice(2)[0];
   await page.goto('https://' + url, {waitUntil: 'networkidle2'});
-  await page.pdf({path: '/pdf/' + url + '.pdf', format: 'A4'});
+  await page.pdf({path: './pdf/' + url + '.pdf', format: 'A4'});
   await browser.close();
 })();

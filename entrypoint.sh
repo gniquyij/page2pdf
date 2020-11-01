@@ -1,4 +1,5 @@
 #!/bin/sh -l
 
-echo $1
+pwd
+ls
 node ./main.js $1
