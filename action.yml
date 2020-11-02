@@ -4,6 +4,9 @@ inputs:
   url:
     description: 'page url'
     required: true
+outputs:
+  domain:
+    description: 'domain'
 runs:
   using: 'docker'
   image: 'Dockerfile'

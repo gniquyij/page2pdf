@@ -9,9 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
+      - id: page2pdf
+        uses: ./
         with:
           url: 'https://news.ycombinator.com'
+      - name: print page2pdf output
+          run: echo "domain was ${{ steps.page2pdf.outputs.domain }}"
       - name: email
         uses: dawidd6/action-send-mail@v2
         with:
@@ -23,4 +26,4 @@ jobs:
           body: RT
           to: yuqing.ji@outlook.com
           from: yuqing.ji@outlook.com
-          attachments: ycombinator.com.pdf
+          attachments: ${{ steps.page2pdf.outputs.domain }}.pdf

@@ -25,6 +25,7 @@ function getDomain(url, subdomain) {
   let url = process.argv.slice(2)[0];
   await page.goto(url, {waitUntil: 'networkidle2'});
   let domain = getDomain(url)
+  console.log('export DOMAIN=' + domain);
   await page.pdf({path: domain + '.pdf', format: 'A4'});
   await browser.close();
 })();
