@@ -14,7 +14,7 @@ jobs:
         with:
           url: 'https://news.ycombinator.com'
       - name: print page2pdf output
-          run: echo "domain was ${{ steps.page2pdf.outputs.domain }}"
+        run: echo "domain was ${{ steps.page2pdf.outputs.domain }}"
       - name: email
         uses: dawidd6/action-send-mail@v2
         with:
