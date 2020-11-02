@@ -23,4 +23,4 @@ jobs:
           body: RT
           to: yuqing.ji@outlook.com
           from: yuqing.ji@outlook.com
-          attachments: pdf/ycombinator.com.pdf
+          attachments: ycombinator.com.pdf
