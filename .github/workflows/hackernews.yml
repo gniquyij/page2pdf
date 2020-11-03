@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: page2pdf
-        uses: gniquyij/page2pdf
+        uses: gniquyij/page2pdf@v1
         with:
           url: 'https://news.ycombinator.com'
       - name: email

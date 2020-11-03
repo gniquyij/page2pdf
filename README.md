@@ -4,7 +4,7 @@ page2pdf saves web page to pdf using [Puppeteer](https://github.com/GoogleChrome
 
 ## Usage
 ```
-- uses: ./
+- uses: gniquyij/page2pdf@v1
   with:
     url: <url>
 ```
