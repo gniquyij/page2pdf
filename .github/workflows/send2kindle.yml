@@ -1,9 +1,8 @@
 name: send2kindle
 
 on:
-  push:
   repository_dispatch:
-    types: manual
+    types: send2kindle
 
 jobs:
   send2kindle:
