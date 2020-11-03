@@ -1,10 +1,17 @@
+name: test
+
+on:
+  push:
+
 jobs:
   page2pdf:
     runs-on: ubuntu-latest
     name: page2pdf
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - uses: ./
+      - uses: actions/checkout@v2
+      - id: page2pdf
+        uses: ./
         with:
           url: 'https://gniquyij.github.io'
+      - name: page2pdf output
+        run: echo "domain was ${{ steps.page2pdf.outputs.domain }}"
