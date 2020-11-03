@@ -9,7 +9,7 @@ page2pdf saves web page to pdf using [Puppeteer](https://github.com/GoogleChrome
     url: <url>   # E.g. 'https://gniquyij.github.io'
 ```
 
-## How I apply page2pdf
+## Examples
 
 - [Daily email Hacker News](https://github.com/gniquyij/page2pdf/blob/master/.github/workflows/hackernews.yml)
 
