@@ -1,28 +1,28 @@
-name: hackernews
+name: send2kindle
 
 on:
   push:
-  schedule:
-    - cron: '0 19 * * *'
+  repository_dispatch:
+    types: manual
 
 jobs:
-  hackernews:
+  send2kindle:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - id: page2pdf
         uses: gniquyij/page2pdf@v1.0.0
         with:
-          url: 'https://news.ycombinator.com'
-      - name: email
+          url: ${{ github.event.client_payload.text }}
+      - name: send2kindle
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: smtp-mail.outlook.com
           server_port: 587
           username: ${{ secrets.EMAIL }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: hackernews
+          subject: ${{ github.event.client_payload.text }}
           body: RT
-          to: yuqing.ji@outlook.com
-          from: ${{ secrets.EMAIL }}
+          to: ${{ secrets.KINDLE_EMAIL }}
+          from: yuqing.ji@outlook.com
           attachments: ${{ steps.page2pdf.outputs.domain }}.pdf
