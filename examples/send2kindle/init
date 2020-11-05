@@ -1,0 +1,5 @@
+# send2kindle
+export GITHUB_USERNAME=<your-Github-username>
+export GITHUB_PERSONAL_ACCESS_TOKEN=<your-Github-personal-access-token>
+func () { bash /<PATH-TO-page2pdf>/examples/send2kindle/send2kindle.sh $1; }
+alias s2k=func
