@@ -20,7 +20,7 @@ In brief, my enter triggered a Github Action job using cURL which is triggered w
 - Job compose file: https://github.com/gniquyij/page2pdf/blob/master/.github/workflows/send2kindle.yml
 - Logs: https://github.com/gniquyij/page2pdf/runs/1367227938?check_suite_focus=true
 
-Some setups beforehand:
+2 setups beforehand:
 
 1. Fork [page2pdf](https://github.com/gniquyij/page2pdf). Include your email, email password, kindle email as secrets. 
 Secret names need to be EMAIL, EMAIL_PASSWORD, and KINDLE_EMAIL. Your Github Action job would refer to them by these names. 
