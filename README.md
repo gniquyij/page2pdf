@@ -11,12 +11,4 @@ page2pdf saves web page to pdf using [Puppeteer](https://github.com/GoogleChrome
 
 ## Examples
 - [Daily email Hacker News](https://github.com/gniquyij/page2pdf/blob/master/.github/workflows/hackernews.yml)
-- [Read web page later on Kindle](https://github.com/gniquyij/page2pdf/blob/master/.github/workflows/send2kindle.yml)
-```
-$ curl \
-    -H "Accept: application/vnd.github.everest-preview+json" \
-    -H "Authorization: token <your-Github-personal-access-token>" \
-    --request POST \
-    --data '{"event_type": "send2kindle", "client_payload": {"text": <url>}}' \   # E.g. "https://gniquyij.github.io"
-    https://api.github.com/repos/<your-Github-name>/page2pdf/dispatches   # E.g. mine is gniquyij
-```
+- [Read-later with send2kindle](./examples/send2kindle/index)
