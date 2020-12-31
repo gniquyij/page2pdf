@@ -11,4 +11,4 @@ page2pdf saves web page to pdf using [Puppeteer](https://github.com/GoogleChrome
 
 ## Examples
 - [Daily email Hacker News](https://github.com/gniquyij/page2pdf/blob/master/.github/workflows/hackernews.yml)
-- [Read-later with send2kindle](./examples/send2kindle/index)
+- [Read-later with send2kindle](https://gniquyij.github.io/page2pdf/examples/send2kindle/)
