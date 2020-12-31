@@ -1,8 +1,11 @@
 name: hackernews
 
 on:
-  schedule:
-    - cron: '0 19 * * *'
+  push:
+    branches:
+      - hackernews
+#  schedule:
+#    - cron: '0 19 * * *'
 
 jobs:
   hackernews:
